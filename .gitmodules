@@ -1,0 +1,3 @@
+[submodule "potmum"]
+	path = potmum
+	url = https://github.com/rutan/potmum.git

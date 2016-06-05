@@ -1,0 +1,35 @@
+main:
+  build: .
+  volumes:
+    - "/data/potmum:/data"
+  environment:
+    USE_ATTACHMENT_FILE: 1
+    VIRTUAL_PORT: 9292
+    ## Set your domain
+    ROOT_URL: https://potmum.example.com
+    VIRTUAL_HOST: potmum.example.com
+    ## Nobody can register in PRIVATE_MODE.
+    PRIVATE_MODE: 0 # 0: off , 1: on
+
+    ### OAUTH Settings
+    ## If you use github oauth, please set below.
+    USE_GITHUB: 0 # 0: off , 1: on
+    GITHUB_KEY: PUT_YOUR_KEY
+    GITHUB_SECRET: PUT_YOUR_SECRET
+    ## If you use twitter oauth, please set below.
+    USE_TWITTER: 0 # 0: off , 1: on
+    TWITTER_KEY: PUT_YOUR_KEY
+    TWITTER_SECRET: PUT_YOUR_SECRET
+    ## If you use google oauth, please set below.
+    USE_GOOGLE: 0 # 0: off , 1: on
+    GOOGLE_KEY: PUT_YOUR_KEY
+    GOOGLE_SECRET: PUT_YOUR_SECRET
+    ## If you use slack oauth, please set below.
+    USE_SLACK: 0 # 0: off , 1: on
+    SLACK_KEY: PUT_YOUR_KEY
+    SLACK_SECRET: PUT_YOUR_SECRET
+    SLACK_TEAM_ID: T0123456
+    SLACK_TEAM_NAME: teamname
+
+    ## Set other envs, if necessary.
+    ## See https://github.com/rutan/potmum#environment-variables
